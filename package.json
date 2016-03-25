@@ -1,0 +1,36 @@
+{
+  "name": "redux-pagination",
+  "version": "0.0.1",
+  "description": "Pagination utilities (action creators, higher order reducer) for redux",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "./scripts/build.sh"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vhpoet/redux-pagination.git"
+  },
+  "keywords": [
+    "redux",
+    "pagination",
+    "react",
+    "higher order reducer",
+    "action creator"
+  ],
+  "author": "Vahe Hovhannisyan <vhpoet@gmail.com> (http://github.com/vhpoet)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vhpoet/redux-pagination/issues"
+  },
+  "homepage": "https://github.com/vhpoet/redux-pagination",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.6.5",
+    "babel-loader": "^6.2.4",
+    "webpack": "^1.12.14"
+  }
+}
