@@ -58,8 +58,7 @@ export default function paginate (reducer) {
         return {
           ...state,
           fail: {},
-          loadingPage: true,
-          list: []
+          loadingPage: true
         }
       case ActionTypes.GET_PAGE_SUCCESS:
         return {
