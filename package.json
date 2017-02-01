@@ -1,6 +1,6 @@
 {
   "name": "redux-pagination",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Pagination utilities (action creators, higher order reducer) for redux",
   "main": "lib/index.js",
   "scripts": {

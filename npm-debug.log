@@ -1,0 +1,122 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/vh/localhost/redux-pagination',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/vh/.npm/redux-pagination/0.1.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/vh/.npm correctMkdir not in flight; initializing
+10 info lifecycle redux-pagination@0.1.1~prepublish: redux-pagination@0.1.1
+11 silly lifecycle redux-pagination@0.1.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/vh/.npm/redux-pagination/0.1.1/package.tgz',
+12 verbose tar pack   '/Users/vh/localhost/redux-pagination' ]
+13 verbose tarball /Users/vh/.npm/redux-pagination/0.1.1/package.tgz
+14 verbose folder /Users/vh/localhost/redux-pagination
+15 verbose addLocalTarball adding from inside cache /Users/vh/.npm/redux-pagination/0.1.1/package.tgz
+16 verbose correctMkdir /Users/vh/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd redux-pagination@0.1.1
+18 verbose afterAdd /Users/vh/.npm/redux-pagination/0.1.1/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/vh/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/vh/.npm/redux-pagination/0.1.1/package/package.json written
+21 silly publish { name: 'redux-pagination',
+21 silly publish   version: '0.1.1',
+21 silly publish   description: 'Pagination utilities (action creators, higher order reducer) for redux',
+21 silly publish   main: 'lib/index.js',
+21 silly publish   scripts: { build: './scripts/build.sh' },
+21 silly publish   files: [ 'lib', 'src' ],
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/vhpoet/redux-pagination.git' },
+21 silly publish   keywords:
+21 silly publish    [ 'redux',
+21 silly publish      'pagination',
+21 silly publish      'react',
+21 silly publish      'higher order reducer',
+21 silly publish      'action creator' ],
+21 silly publish   author:
+21 silly publish    { name: 'Vahe Hovhannisyan',
+21 silly publish      email: 'vhpoet@gmail.com',
+21 silly publish      url: 'http://github.com/vhpoet' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/vhpoet/redux-pagination/issues' },
+21 silly publish   homepage: 'https://github.com/vhpoet/redux-pagination',
+21 silly publish   devDependencies:
+21 silly publish    { babel: '^6.5.2',
+21 silly publish      'babel-cli': '^6.6.5',
+21 silly publish      'babel-loader': '^6.2.4',
+21 silly publish      'babel-preset-es2015': '^6.18.0',
+21 silly publish      'babel-preset-stage-0': '^6.16.0',
+21 silly publish      webpack: '^1.12.14' },
+21 silly publish   gitHead: '4a8d962071129ebd237a5ef1a3291b18e9b14c44',
+21 silly publish   readme: 'Redux Pagination\n=========================\n\nPagination utilities (action creators, higher order reducer) for [Redux](https://github.com/rackt/redux).  \n\n## Note!\n\nThe current implementation makes a lot of assumptions about your api, heavily \ndepends on [redux-thunk](https://github.com/gaearon/redux-thunk) and this [middleware](https://github.com/erikras/react-redux-universal-hot-example/blob/master/src/redux/middleware/clientMiddleware.js)!\nYou should really look at the [code](https://github.com/vhpoet/redux-pagination/blob/master/src/index.js) before trying to use this.\n\n## Installation \n\n```\nnpm install --save redux-pagination\n```\n\n## API\n\n```js\nimport paginate from \'redux-pagination\'\npaginate(reducer)\npaginate(reducer, config)\n```\n\n## Adding pagination to your reducers\n\n`redux-pagination` is a reducer enhancer (higher-order reducer), it provides the \npaginate function, which takes an existing reducer and a configuration object \nand enhances your existing reducer with pagination functionality.\n\nTo install, firstly import `redux-pagination`\n\n```js\n// Redux utility functions\nimport { combineReducers } from \'redux\'\n// redux-pagination higher-order reducer\nimport paginate from \'redux-pagination\';\n```\n\nThen, add `paginate` to your reducer(s) like this:\n\n```js\ncombineReducers({\n  history: paginate(history)\n})\n```\n\n## Pagination Actions\n\nImport the action creator init function:\n\n```js\nimport { initActionCreators } from \'redux-pagination\';\n```\n\nInit the Action Creators\n\n```js\nconst paginationActionCreators = initActionCreators({\n  limit: 30, // number of items per page\n  path: \'/payments\' // path to the make the call to\n})\n```\n\nThen, you can use `store.dispatch()` and the pagination action creators to\nperform pagination operations on your state:\n\n```js\nstore.dispatch(paginationActionCreators.getPage(pageNumber))\n```\n\n## TODO\n- add tests\n- add caching\n- don\'t make assumptions about the api\n- don\'t depend on a specific client\n- don\'t depend on specific url params\n- don\'t depend on that middleware I mentioned above\n\n## License\n\nMIT, see `LICENSE.md`.',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'redux-pagination@0.1.1',
+21 silly publish   _shasum: '93e3bd5f83c943c974eab85dbd5a5b1ec7639a4f',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name redux-pagination
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'redux-pagination',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'redux-pagination',
+26 silly mapToRegistry   name: 'redux-pagination',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/redux-pagination
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/vh/.npm/redux-pagination/0.1.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/redux-pagination
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:51:47 AM
+33 verbose request id 63e69ab561ee4a88
+34 http request PUT https://registry.npmjs.org/redux-pagination
+35 http 403 https://registry.npmjs.org/redux-pagination
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Wed, 01 Feb 2017 19:51:47 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-lax8621-LAX',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1485978707.464020,VS0,VE196',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /Users/vh/.npm/registry.npmjs.org/redux-pagination on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 0.1.1." : redux-pagination
+39 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+39 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+39 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+39 verbose stack     at emitTwo (events.js:106:13)
+39 verbose stack     at Request.emit (events.js:191:7)
+39 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+39 verbose stack     at emitOne (events.js:96:13)
+39 verbose stack     at Request.emit (events.js:188:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+40 verbose statusCode 403
+41 verbose pkgid redux-pagination
+42 verbose cwd /Users/vh/localhost/redux-pagination
+43 error Darwin 16.3.0
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+45 error node v6.9.1
+46 error npm  v3.10.8
+47 error code E403
+48 error "You cannot publish over the previously published version 0.1.1." : redux-pagination
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]

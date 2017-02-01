@@ -40,6 +40,7 @@ export default function paginate (reducer) {
   const initialState = {
     ...reducer(undefined, {}),
     loadingPage: false,
+    initialLoad: false,
     currentPage: 1,
     totalPages: 1,
     fail: {},
@@ -65,12 +66,14 @@ export default function paginate (reducer) {
           ...state,
           fail: {},
           loadingPage: false,
+          initialLoad: true,
           list: action.result.list,
           totalPages: action.result.totalPages
         }
       case ActionTypes.GET_PAGE_FAIL:
         return {
           ...state,
+          initialLoad: true,
           fail: action.result
         }
       default:
